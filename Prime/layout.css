@@ -1,0 +1,169 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the left vertical div */
+.info {
+    position: fixed; /* Stays in place when scrolling */
+    top: 0;
+    left: 0;
+    width: 200px; /* Set the desired width */
+    height: 100vh; /* Full viewport height */
+    background-color: royalblue; /* Color of the div */
+    color: orange;
+    padding: 20px;
+    overflow: auto; /* Add scrolling if content overflows */
+}
+
+.info img{
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.info h3{
+    margin-top: 50px;
+}
+
+.info button{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: orange;
+    background-color: grey;
+    margin-top: 200px;
+}
+
+/* Content for the rest of the page */
+.container{
+    background: url(pageslogo.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-left: 200px; 
+    padding: 20px;
+    display: flex;          /* Flexbox layout */
+    justify-content: space-around; /* Space between boxes */
+    flex-wrap: wrap;        /* Allows wrapping to the next line if necessary */
+}
+
+
+
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: royalblue; /* Box color */
+    margin: 100px; 
+    padding: 20px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    color: orange;
+    font-weight: bold;
+    border-radius: 8px; 
+    opacity: 95%;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: royalblue; /* Box color */
+    margin: 100px; 
+    padding: 20px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    color: orange;
+    font-weight: bold;
+    border-radius: 8px; 
+    opacity: 95%;
+}
+
+.squ{
+    width: 200px;
+    height: 100px;
+    background-color: royalblue; /* Box color */
+    margin: 100px; 
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: orange;
+    font-weight: bold;
+    border-radius: 8px; 
+    opacity: 95%;
+
+}
+
+.rectangle{
+    width: 500px;
+    height: 100px;
+    background-color: royalblue; /* Box color */
+    margin: 100px; 
+    padding: 20px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    color: orange;
+    font-weight: bold;
+    border-radius: 8px; 
+    opacity: 95%;
+
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 100px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}

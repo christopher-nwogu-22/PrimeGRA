@@ -1,0 +1,202 @@
+html,body{
+    background-color: #ffffff;
+    font-family: 'Times New Roman', Times, serif;
+    overflow-x: hidden !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: orange;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: royalblue;
+}
+
+.nav .links button{
+    background-color: royalblue;
+    color: orange;
+}
+
+.logo img{
+    height: 100px;
+}
+
+.landing{
+    background: url(landingbackground.jpeg);
+    height: 100vh;
+    width: 10%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100vw 0 100vw;
+    padding-top: 6%;
+    position: relative;
+}
+
+.landingText h1{
+    font-size: 100vw;
+    
+}
+
+.aim{
+    height: 100px;
+    padding: 50px;
+    justify-content: space-evenly;
+    
+}
+.aimText{
+    color: orange;
+}
+
+
+.mission{
+    height:auto;
+    padding: 50px;
+    justify-content: space-evenly;
+    background-color: grey;
+}
+
+.missionText h1{
+    color: royalblue;
+    text-align: right;
+}
+
+.missionContent p{
+    text-align: right;
+}
+
+.vision{
+    height: auto;
+    padding: 50px;
+    justify-content: space-evenly;
+    background-color: grey;
+}
+
+.visionText h1{
+    color: orange;
+}
+
+.obcv{
+    height: auto;
+    padding: 50px;
+    justify-content: space-evenly;
+}
+
+.objective{
+    color: royalblue;
+    text-align: right;
+}
+
+.objContent p{
+    text-align: right;
+}
+
+.core{
+    color: orange;
+}
+
+.mtes{
+    height: auto;
+    padding: 50px;
+    justify-content: space-evenly;
+    background-color: grey;
+}
+
+.excos h1{
+    text-align: center;
+    color: royalblue;
+}
+
+
+.excosContent h3{
+    color: orange;
+}
+
+.pres{
+    padding: 50px;
+}
+
+
+.pres img{
+    width: 10vw;
+    float: left;
+}
+
+.vp{
+    padding: 50px;
+}
+
+.vp h3{
+    text-align: right;
+}
+
+.vp p{
+    text-align: right;
+}
+
+.vp img{
+    width: 10vw;
+    float: right;
+}
+
+.tres{
+    padding: 50px;
+}
+
+
+.tres img{
+    width: 10vw;
+    float: left;
+}
+
+.sec{
+    padding: 50px;
+}
+
+.sec h3{
+    text-align: right;
+}
+
+.sec p{
+    text-align: right;
+}
+
+
+.sec img{
+    width: 10vw;
+    float: right;
+}
+
+.comm{
+    padding: 50px;
+}
+
+.comm img{
+    width: 10vw;
+    float: left;
+}
+
+
+

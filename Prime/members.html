@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Form</title>
+    <link rel="stylesheet" href="prime.css">
+    <link rel="stylesheet" href="layout.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            background: url(prlogo.png);
+            background-size: 1000px;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-attachment: fixed;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: orange;
+            opacity: 90%;
+            padding: 100px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            color: royalblue;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .submit-btn {
+            background-color: royalblue;
+            color: orange;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: navy;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="nav">
+            <div class="logo">
+                <img src="prlogo.png" alt="">
+    
+            </div>
+            <div class="links">
+                <button type="button">LOG OUT</button>
+            </div>
+        </div>
+        <div class="form-container">
+
+            <form action="/submit-membership" method="post">
+                <h1>Personal details</h1>
+    
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="full-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="full-name">Middle Name:</label>
+                    <input type="text" id="middle-name" name="middle-name" placeholder="Middle name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="full-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+    
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="Phone">Phone Number:</label>
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="Phone Number" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="address">Permanent Home Address:</label>
+                    <input type="text" id="permanent-address" name="permanent-address" placeholder="Permanent Address" required>
+                </div>
+    
+                <h1>NEXT OF KIN DETAILS</h1>
+                <div class="form-group">
+                    <label for="full-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="full-name">Middle Name:</label>
+                    <input type="text" id="middle-name" name="middle-name" placeholder="Middle name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="full-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+    
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="password">Phone Number:</label>
+                    <input type="password" id="phone-number" name="phone-number" placeholder="Phone Number" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="password">Permanent Home Address:</label>
+                    <input type="password" id="permanent-address" name="permanent-address" placeholder="Permanent Address" required>
+                </div>
+    
+                
+    
+    
+                <!-- Agree to Terms (Checkbox) -->
+                <div class="form-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I agree to the <a href="#">terms and conditions</a></label>
+                </div>
+    
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit</button>
+    
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

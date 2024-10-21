@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME</title>
+    <link rel="stylesheet" href="prime.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;  
+            align-items: center;      
+            background-color: #f0f0f0;
+        }
+
+        .login-container {
+            background:url(pageslogo.png);
+            background-position: 100%;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: auto;
+            height: auto;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            color: royalblue;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            opacity: 50%;
+        }
+
+        .login-container input[type="submit"] {
+            background-color: royalblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: navy;
+        }
+
+        .login-container a {
+            display: block;
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <div class="logo">
+                <img src="prlogo.png" alt="">
+
+            </div>
+            <div class="links">
+                <a href="">LOG IN</a>
+                <button type="button" onclick="window.location.href='members.html'">SIGN UP</button>
+            </div>
+        </div>
+
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                <input type="text" name="username" placeholder="Enter your username" required>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                <input type="submit" value="Login" onclick="window.location.href='corphome.html'">
+            </form>
+            <a href="/forgot-password">Forgot your password?</a>
+        </div>
+    </div>
+</body>

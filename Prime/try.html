@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meter Arc with SVG</title>
+    <style>
+        .meter-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .meter-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: -40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="meter-container">
+        <svg width="200" height="100" viewBox="0 0 200 100">
+            <!-- Background Arc -->
+            <path d="M 10,100 A 90,90 0 0 1 190,100" stroke="#ddd" stroke-width="20" fill="none" />
+
+            <!-- Value Arc (adjust stroke-dasharray to represent percentage) -->
+            <path d="M 10,100 A 90,90 0 0 1 190,100" stroke="#4caf50" stroke-width="20" fill="none"
+                  stroke-dasharray="360 180" stroke-linecap="round" />
+        </svg>
+        <div class="meter-value">0%</div>
+    </div>
+
+</body>
+</html>

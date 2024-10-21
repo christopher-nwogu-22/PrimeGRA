@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Form</title>
+    <link rel="stylesheet" href="prime.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <div class="logo">
+                <img src="prlogo.png" alt="">
+    
+            </div>
+            <div class="links">
+                <button type="button" onclick="window.location.href='login.html'">LOG OUT</button>
+            </div>
+        </div>
+        <div class="form-container">
+
+            <form action="/submit-membership" method="post">
+                <h1>LOAN FORM</h1>
+    
+                <div class="form-group">
+                    <label for="full-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="full-name">Middle Name:</label>
+                    <input type="text" id="middle-name" name="middle-name" placeholder="Middle name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="full-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="full-name">AMOUNT</label>
+                    <input type="number" id="amount" name="amount" placeholder="amount" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="purpose-loan">PURPOSE OF LOAN</label>
+                    <select id="purpose-type" name="purpose-type" required>
+                        <option value="" disabled selected>Select purpose</option>
+                        <option value="general">GENERAL</option>
+                        <option value="exco">EXECUTIVE(ONLY EXCOS)</option>
+                        <option value="equip">EQUIPMENT</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="guarantor">GUARANTOR</label>
+                    <select id="guarantor" name="guarantor" required>
+                        <option value="" disabled selected>Select guarantor</option>
+                        <option value="general">GENERAL</option>
+                    </select>
+                </div>
+    
+                
+    
+    
+                <!-- Agree to Terms (Checkbox) -->
+                <div class="form-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I agree to the <a href="#">terms and conditions</a></label>
+                </div>
+    
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit</button>
+    
+            </form>
+        </div>
+    </div>
+
+   
+
+</body>
+</html>
