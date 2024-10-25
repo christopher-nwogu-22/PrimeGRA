@@ -55,15 +55,20 @@ html,body{
     position: relative;
 }
 
-.landingText h1{
-    font-size: 100vw;
+.landingText img{
+    size: 100px;
     
 }
 
+
+
 .aim{
+    background: url(prlogo.png) no-repeat;
+    background-position: center;
     height: 100px;
     padding: 50px;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     
 }
 .aimText{
@@ -72,6 +77,8 @@ html,body{
 
 
 .mission{
+    background: url(pageslogo.png) no-repeat;
+    background-position: center;
     height:auto;
     padding: 50px;
     justify-content: space-evenly;
@@ -99,6 +106,9 @@ html,body{
 }
 
 .obcv{
+    background: url(prlogo.png) no-repeat;
+    background-position: center;
+    background-size: 600px;
     height: auto;
     padding: 50px;
     justify-content: space-evenly;
