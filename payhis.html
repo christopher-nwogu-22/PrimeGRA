@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+		<!-- CSS Global Compulsory -->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!-- CSS Header and Footer -->
+		<link rel="stylesheet" href="assets/css/header.css">
+		<link rel="stylesheet" href="assets/css/footer.css">
+
+		<!-- CSS Implementing Plugins -->
+		<link rel="stylesheet" href="assets/plugins/line-icons-pro/styles.css">
+		<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+		<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+		<!-- CSS Customization -->
+		<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header-v1">
+            <div class="topbar-v1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-inline top-v1-contacts">
+                                <li>
+                                    <i class="fa fa-envelope"></i>Email:primegra10@gmail.com
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i>Contact:08023593827
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar mega-menu" role="navigation" >
+                <div class="container">
+                    <div class="res-container">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand">
+                            <a href="home.html">
+                                <img style="height: 100px;" src="assets/img/prlogo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-responsive-collapse">
+                        <div class="res-container">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-bell"></i>
+                                        
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                         <li>
+                                            <i>No notifications</i>
+                                         </li>
+                                    </ul>
+                                </li>    
+                                <li class="mega-menu-fullwidth">
+                                    <a href="login.html">
+                                        LOGOUT
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="smwrapper">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-wrapper">
+                        <div class="profile">
+                            <div class="profile-picture">
+                                <label for="file-input">
+                                    <img id="profile-img" src="https://via.placeholder.com/80" alt="Profile Picture">
+                                </label>
+                                <input id="file-input" type="file" style="display: none;" onchange="loadProfileImage(event)">
+                            </div>
+                            <div class="profile-info">
+                                <p id="customer-name">Customer Name</p>
+                                <span id="customer-rank">--</span>
+                            </div>
+                        </div>
+                        <ul class="nav">
+                            <li><a href="loan.html" onclick="showSection('loan-account')">Loan Account</a></li>
+                            <li><a href="savings.html" onclick="showSection('savings-account')">Savings Account</a></li>
+                            <li><a href="attend.html" onclick="showSection('attendance')">Attendance</a></li>
+                            <li><a href="dividends.html" onclick="showSection('dividends')">Dividends</a></li>
+                            <li><a href="fines.html" onclick="showSection('fines')">Fines</a></li>
+                            <li><a href="fees.html" onclick="showSection('fees')">Fees</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-panel">
+                    <div class="main-content">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-v1">
+                <div class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 md-margin-bottom-40">
+                                <a href="home.html"><img id="logo-footer" class="footer-logo" style="height: 200px;" src="assets/img/pageslogo.png" alt=""></a>
+                            </div>
+                            <div class="col-md-3" style="margin-bottom: 40px;">
+                                <div class="headline"><h2>Useful Links</h2></div>
+                                <ul class="list-unstyled link-list">
+                                    <li><a href="about.html">About us</a><i class="fa fa-angle-right"></i></li>
+                                    <li><a href="login.html">Login</a><i class="fa fa-angle-right"></i></li>
+                                    <li><a href="register.html">Register</a><i class="fa fa-angle-right"></i></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 map-img" style="margin-bottom: 40px;">
+                                    <div class="headline"><h2>Contact Us</h2></div>
+                                    <address class="md-margin-bottom-40">
+                                            100 akarigbo road <br/>
+                                            Sagamu, Ogun state<br/>
+                                            
+                                    </address>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                    2024 &copy; CIN TECH SOLUTIONS.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    
+</body>
+</html>

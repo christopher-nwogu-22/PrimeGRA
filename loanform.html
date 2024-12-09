@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+		<!-- CSS Global Compulsory -->
+		<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+
+		<!-- CSS Header and Footer -->
+		<link rel="stylesheet" href="assets/css/header.css">
+		<link rel="stylesheet" href="assets/css/footer.css">
+
+		<!-- CSS Implementing Plugins -->
+		<link rel="stylesheet" href="assets/plugins/line-icons-pro/styles.css">
+		<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
+		<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+
+		<!-- CSS Customization -->
+		<link rel="stylesheet" href="assets/css/custom.css">
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: #f0f4f8;
+  }
+
+  .form-container {
+    background-color: lightgray;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    transition: all 0.3s;
+  }
+
+  .form-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4169e1; /* Royal Blue */
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4169e1; /* Royal Blue */
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group input[type="date"],
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input[type="text"]:focus,
+  .form-group input[type="number"]:focus,
+  .form-group input[type="date"]:focus,
+  .form-group select:focus {
+    border-color: #4169e1; /* Royal Blue */
+    outline: none;
+  }
+
+  .form-group .terms-label {
+    font-weight: normal;
+    color: #4169e1; /* Royal Blue */
+  }
+
+  .form-group input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 8px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4169e1; /* Royal Blue */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .submit-btn:hover {
+    background-color: #ff8c00; /* Orange */
+  }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header-v1">
+            <div class="topbar-v1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-inline top-v1-contacts">
+                              <li>
+                                <i class="fa fa-envelope"></i>Email:primegra10@gmail.com
+                            </li>
+                            <li>
+                                <i class="fa fa-phone"></i>Contact:08023593827
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar mega-menu" role="navigation" >
+                <div class="container">
+                    <div class="res-container">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand">
+                            <a href="home.html">
+                                <img style="height: 100px;" src="assets/img/prlogo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-responsive-collapse">
+                        <div class="res-container">
+                            <ul class="nav navbar-nav">
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-bell"></i>
+                                    
+                                </a>
+                                <ul class="dropdown-menu">
+                                     <li>
+                                        <i>No notifications</i>
+                                     </li>
+                                </ul>
+                            </li>    
+                                <li class="mega-menu-fullwidth">
+                                    <a href="login.html">
+                                        LOGOUT
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="smwrapper">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar-wrapper">
+                        <div class="profile">
+                            <div class="profile-picture">
+                                <label for="file-input">
+                                    <img id="profile-img" src="https://via.placeholder.com/80" alt="Profile Picture">
+                                </label>
+                                <input id="file-input" type="file" style="display: none;" onchange="loadProfileImage(event)">
+                            </div>
+                            <div class="profile-info">
+                                <p id="customer-name">Customer Name</p>
+                                <span id="customer-rank">--</span>
+                            </div>
+                        </div>
+                        <ul class="nav">
+                            <li><a href="loan.html" onclick="showSection('loan-account')">Loan Account</a></li>
+                            <li><a href="savings.html" onclick="showSection('savings-account')">Savings Account</a></li>
+                            <li><a href="attend.html" onclick="showSection('attendance')">Attendance</a></li>
+                            <li><a href="dividends.html" onclick="showSection('dividends')">Dividends</a></li>
+                            <li><a href="fines.html" onclick="showSection('fines')">Fines</a></li>
+                            <li><a href="fees.html" onclick="showSection('fees')">Fees</a></li>
+                        </ul>
+                    </div>
+                </div>
+               
+                      <div class="form-container">
+                        <h2>Loan Application Form</h2>
+                        <form action="submit_loan_form.php" method="POST">
+                          <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first_name" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="middle-name">Middle Name</label>
+                            <input type="text" id="middle-name" name="middle_name">
+                          </div>
+                          <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last_name" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="amount">Loan Amount</label>
+                            <input type="text" id="amount" name="amount" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="purpose">Purpose of Loan</label>
+                            <input type="text" id="purpose" name="purpose" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="purpose">Typer of Loan</label>
+                            <select id="typeofloan" name="Type of Loan" required>
+                              <option value=""disabled selected>Type Of Loan</option>
+                              <option value="executive">EXECUTIVE</option>
+                              <option value="executive">EXECUTIVE</option>
+                              <option value="executive">EXECUTIVE</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="guarantor">GUARANTOR1*</label>
+                            <select id="guarantor" name="guarantor" required>
+                                <option value="" disabled selected>Select guarantor</option>
+                                <option value="general">NWOBODO HELEN </option>
+                                <option value="general">DEBORAH ABEL</option>
+                                <option value="general">ADU BUSUYI SAMUEL</option>
+                                <option value="general">OGBEH GODFREY</option>
+                                <option value="general">EJEMBI FRANCIS</option>
+                                <option value="general">GLORY EKPENYONG</option>
+                                <option value="general">OMOTOLA ADARAMOLA</option>
+                                <option value="general">FELICIA JOHN-OBASI</option>
+                                <option value="general">AKERELE OGUNAIKE AJEWOLE</option>
+                                <option value="general">AUGUSTINE EKUMA</option>
+                                <option value="general">AFOLAKE OFUNFOWORA</option>
+                                <option value="general">OMOTOYOSI ANIKI</option>
+                                <option value="general">OLANRENWAJU WHESU</option>
+                                <option value="general">OGUNLEYE OLAJUMOKE</option>
+                                <option value="general">OSIBOWALE VICTORIA</option>
+                                <option value="general">ADEDAYO JAIYEOLA</option>
+                                <option value="general">ONA FESTUS</option>
+                                <option value="general">ODUNAYA TEMITOPE</option>
+                                <option value="general">SHOYIGA SEYITOPE</option>
+                                <option value="general">BOLUJO OLUFEMI</option>
+                                <option value="general">OLUBUKOLA OMONIYI</option>
+                                <option value="general">ONABOLU FUNMILOLA</option>
+                                <option value="general">KAMAL OLAWALE</option>
+                                <option value="general">OLAWUNMI ITUNU</option>
+                                <option value="general">EZEKIEL BAMIMORE .A</option>
+                                <option value="general">HANNAH AKINWUNMI</option>
+                                <option value="general">AYOTOLA IPAYE</option>
+                                <option value="general">JOSEPH ODION JOHN</option>
+                                <option value="general">CHUKWUEMEKA ORJI</option>
+                                <option value="general">ABEL NANCY</option>
+                                <option value="general">PASTOR OLUFEMI</option>
+                                <option value="general">OKENIYI SUNDAY</option>
+                                <option value="general">BANWO BOLANLE</option>
+                                <option value="general">CELESTINA ABEL</option>
+                                <option value="general">CHRISTOPHER IFEANYICHUKWU NWOGU</option>
+                                <option value="general">OLUSESAN JOHNSON OGUNKOYA</option>
+                                <option value="general">HELEN OVIE</option>
+                                <option value="general">JOSEPH NWOBODO</option>
+                                <option value="general">OLAJIDE IWALOLA</option>
+                                <option value="general">SALAKO TITILAYO</option>
+                                <option value="general">AJAYI FAUSAT</option>
+                                <option value="general">SOYOYE TOMIWA</option>
+                                <option value="general">JULIET IBRAHIM</option>
+                                <option value="general">MABAYOJE ADEBAYO</option>
+                                <option value="general">OLORUNDAMI BABATUNDE</option>
+                                <option value="general">DUNIA ANDREW</option>
+                                <option value="general">ADESANYA SUNDAY</option>
+                                <option value="general">OGBONNA CHINYERE</option>
+                                <option value="general">CHUKWUMA CHINYERE EDEH</option>
+                                <option value="general">OYENUGA AYOMIPOSI</option>
+                                <option value="general">ONABOLU AYODELE</option>
+                                <option value="general">JEGEDE SAMUEL</option>
+                                <option value="general">OKETOLA ADERONKE</option>
+                                <option value="general">OLUSESAN JOHNSON OGUNKOYA MRS</option>
+                                <option value="general">BAKARE OLUREMI</option>
+                                <option value="general">MARY OPEYEMI OLUWASEYI</option>
+                                <option value="general">AUGUSTINE MONDAY</option>
+                                <option value="general">TAIWO EBUNOLUWA</option>
+                                <option value="general">OLADOYIN OMOFELA</option>
+                                <option value="general">PROF ONABOLU</option>
+                                <option value="general">AYODELE JULIUS</option>
+                                <option value="general">JOHN IDUH</option>
+                                <option value="general">EKPE JOSEPH</option>
+                                <option value="general">OLOYE OLUGBENGA TEMIDAYO</option>
+                                <option value="general">CHUKWUDI ONU EMMANUEL</option>
+                                <option value="general">ONU KENECHUKWU GODWIN</option>
+                                <option value="general">AMAGA JOSEPH</option>
+                                <option value="general">ABIOYE REBECAH OLAYINKA</option>
+                                <option value="general">IDOWU OKELANA BUSIRAT</option>
+                                <option value="general">ETOR EVELYN</option>
+                                <option value="general">EJEMBI AGNES ADA</option>
+                                <option value="general">BELLO OLUFUNKE ADEFISOYE</option>
+                                <option value="general">AFOLAYAN ADEWALE</option>
+                                <option value="general">YEKINNI ALABA MUTIAT</option>
+                                <option value="general">OBADINA VICTOR OLUSEGUN</option>
+                                <option value="general">ANDREW OMOROWA</option>
+                                <option value="general">IMOBIGHE IREIN VICTOR </option>
+                                <option value="general">MARTHA VIYEZE ORKEH</option>
+                                <option value="general">OLAJUWON AKERELE BUSAYO</option>
+                                <option value="general">AKINTUNDE REBECCA</option>
+                                <option value="general">WABEKE UZOAMAKA GIFT</option>
+                                <option value="general">OGUNKOYA OLUSOGA ANUOLUWA</option>
+                                <option value="general">OSIBERU OLUWAFUNMILAYO</option>
+                                <option value="general">ONAKAYO CHRISTABEL NKOLI</option>
+                                <option value="general">GAB AWUSA MOB</option>
+                                <option value="general">ADEDIGBA ADEBUKOLA</option>
+                                <option value="general">PRECIOUS UMA OKOYE</option>
+                                <option value="general">ADUROGBE OLUSOLA</option>
+                                <option value="general">AFOLABI VERAH</option>
+                                <option value="general">EGBEDION PRISICILLA</option>
+                                <option value="general">OLANIYI OLUSOLA</option>
+                                <option value="general">KAMAL ADEDOYIN OLUWASEYI</option>
+                                <option value="general">MAUREEN COLUMBUS</option>
+                                <option value="general">OCHIM JULIET</option>
+                                <option value="general">EMMANUEL ESTHER CHINASA</option>
+                                <option value="general">BAMGBOSE ABIMBOLA OJO</option>
+                                <option value="general">FASANYA KUDIRAT MOJIRAYO</option>
+                                <option value="general">BLESSING OLORUNDAMI</option>
+                                <option value="general">JOSEPH OLUGBENGA ONI</option>
+                                <option value="general">OSENI ABOLANLE</option>
+                                <option value="general">MANLEEN NUYEH</option>
+                                <option value="general">AJULO EMEM</option>
+                                <option value="general">ABEL AYOKUNLE</option>
+                                <option value="general">SONARIWO ISIDORA ADEWUNMI</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="guarantor">GUARANTOR2*</label>
+                            <select id="guarantor" name="guarantor" required>
+                                <option value="" disabled selected>Select guarantor</option>
+                                <option value="general">NWOBODO HELEN </option>
+                                <option value="general">DEBORAH ABEL</option>
+                                <option value="general">ADU BUSUYI SAMUEL</option>
+                                <option value="general">OGBEH GODFREY</option>
+                                <option value="general">EJEMBI FRANCIS</option>
+                                <option value="general">GLORY EKPENYONG</option>
+                                <option value="general">OMOTOLA ADARAMOLA</option>
+                                <option value="general">FELICIA JOHN-OBASI</option>
+                                <option value="general">AKERELE OGUNAIKE AJEWOLE</option>
+                                <option value="general">AUGUSTINE EKUMA</option>
+                                <option value="general">AFOLAKE OFUNFOWORA</option>
+                                <option value="general">OMOTOYOSI ANIKI</option>
+                                <option value="general">OLANRENWAJU WHESU</option>
+                                <option value="general">OGUNLEYE OLAJUMOKE</option>
+                                <option value="general">OSIBOWALE VICTORIA</option>
+                                <option value="general">ADEDAYO JAIYEOLA</option>
+                                <option value="general">ONA FESTUS</option>
+                                <option value="general">ODUNAYA TEMITOPE</option>
+                                <option value="general">SHOYIGA SEYITOPE</option>
+                                <option value="general">BOLUJO OLUFEMI</option>
+                                <option value="general">OLUBUKOLA OMONIYI</option>
+                                <option value="general">ONABOLU FUNMILOLA</option>
+                                <option value="general">KAMAL OLAWALE</option>
+                                <option value="general">OLAWUNMI ITUNU</option>
+                                <option value="general">EZEKIEL BAMIMORE .A</option>
+                                <option value="general">HANNAH AKINWUNMI</option>
+                                <option value="general">AYOTOLA IPAYE</option>
+                                <option value="general">JOSEPH ODION JOHN</option>
+                                <option value="general">CHUKWUEMEKA ORJI</option>
+                                <option value="general">ABEL NANCY</option>
+                                <option value="general">PASTOR OLUFEMI</option>
+                                <option value="general">OKENIYI SUNDAY</option>
+                                <option value="general">BANWO BOLANLE</option>
+                                <option value="general">CELESTINA ABEL</option>
+                                <option value="general">CHRISTOPHER IFEANYICHUKWU NWOGU</option>
+                                <option value="general">OLUSESAN JOHNSON OGUNKOYA</option>
+                                <option value="general">HELEN OVIE</option>
+                                <option value="general">JOSEPH NWOBODO</option>
+                                <option value="general">OLAJIDE IWALOLA</option>
+                                <option value="general">SALAKO TITILAYO</option>
+                                <option value="general">AJAYI FAUSAT</option>
+                                <option value="general">SOYOYE TOMIWA</option>
+                                <option value="general">JULIET IBRAHIM</option>
+                                <option value="general">MABAYOJE ADEBAYO</option>
+                                <option value="general">OLORUNDAMI BABATUNDE</option>
+                                <option value="general">DUNIA ANDREW</option>
+                                <option value="general">ADESANYA SUNDAY</option>
+                                <option value="general">OGBONNA CHINYERE</option>
+                                <option value="general">CHUKWUMA CHINYERE EDEH</option>
+                                <option value="general">OYENUGA AYOMIPOSI</option>
+                                <option value="general">ONABOLU AYODELE</option>
+                                <option value="general">JEGEDE SAMUEL</option>
+                                <option value="general">OKETOLA ADERONKE</option>
+                                <option value="general">OLUSESAN JOHNSON OGUNKOYA MRS</option>
+                                <option value="general">BAKARE OLUREMI</option>
+                                <option value="general">MARY OPEYEMI OLUWASEYI</option>
+                                <option value="general">AUGUSTINE MONDAY</option>
+                                <option value="general">TAIWO EBUNOLUWA</option>
+                                <option value="general">OLADOYIN OMOFELA</option>
+                                <option value="general">PROF ONABOLU</option>
+                                <option value="general">AYODELE JULIUS</option>
+                                <option value="general">JOHN IDUH</option>
+                                <option value="general">EKPE JOSEPH</option>
+                                <option value="general">OLOYE OLUGBENGA TEMIDAYO</option>
+                                <option value="general">CHUKWUDI ONU EMMANUEL</option>
+                                <option value="general">ONU KENECHUKWU GODWIN</option>
+                                <option value="general">AMAGA JOSEPH</option>
+                                <option value="general">ABIOYE REBECAH OLAYINKA</option>
+                                <option value="general">IDOWU OKELANA BUSIRAT</option>
+                                <option value="general">ETOR EVELYN</option>
+                                <option value="general">EJEMBI AGNES ADA</option>
+                                <option value="general">BELLO OLUFUNKE ADEFISOYE</option>
+                                <option value="general">AFOLAYAN ADEWALE</option>
+                                <option value="general">YEKINNI ALABA MUTIAT</option>
+                                <option value="general">OBADINA VICTOR OLUSEGUN</option>
+                                <option value="general">ANDREW OMOROWA</option>
+                                <option value="general">IMOBIGHE IREIN VICTOR </option>
+                                <option value="general">MARTHA VIYEZE ORKEH</option>
+                                <option value="general">OLAJUWON AKERELE BUSAYO</option>
+                                <option value="general">AKINTUNDE REBECCA</option>
+                                <option value="general">WABEKE UZOAMAKA GIFT</option>
+                                <option value="general">OGUNKOYA OLUSOGA ANUOLUWA</option>
+                                <option value="general">OSIBERU OLUWAFUNMILAYO</option>
+                                <option value="general">ONAKAYO CHRISTABEL NKOLI</option>
+                                <option value="general">GAB AWUSA MOB</option>
+                                <option value="general">ADEDIGBA ADEBUKOLA</option>
+                                <option value="general">PRECIOUS UMA OKOYE</option>
+                                <option value="general">ADUROGBE OLUSOLA</option>
+                                <option value="general">AFOLABI VERAH</option>
+                                <option value="general">EGBEDION PRISICILLA</option>
+                                <option value="general">OLANIYI OLUSOLA</option>
+                                <option value="general">KAMAL ADEDOYIN OLUWASEYI</option>
+                                <option value="general">MAUREEN COLUMBUS</option>
+                                <option value="general">OCHIM JULIET</option>
+                                <option value="general">EMMANUEL ESTHER CHINASA</option>
+                                <option value="general">BAMGBOSE ABIMBOLA OJO</option>
+                                <option value="general">FASANYA KUDIRAT MOJIRAYO</option>
+                                <option value="general">BLESSING OLORUNDAMI</option>
+                                <option value="general">JOSEPH OLUGBENGA ONI</option>
+                                <option value="general">OSENI ABOLANLE</option>
+                                <option value="general">MANLEEN NUYEH</option>
+                                <option value="general">AJULO EMEM</option>
+                                <option value="general">ABEL AYOKUNLE</option>
+                                <option value="general">SONARIWO ISIDORA ADEWUNMI</option>
+                            </select>
+                          </div>
+            
+                          <div class="form-group">
+                            <label for="loan-date">Loan Date</label>
+                            <input type="date" id="loan-date" name="loan_date" required>
+                          </div>
+                          <div class="form-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms" class="terms-label">I agree to the terms and conditions</label>
+                          </div>
+                          <button type="submit" class="submit-btn">Submit Form</button>
+                        </form>
+                      </div>
+                        
+                    
+                    
+              </div>
+
+            <div class="footer-v1">
+                <div class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 md-margin-bottom-40">
+                                <a href="home.html"><img id="logo-footer" class="footer-logo" style="height: 200px;" src="assets/img/pageslogo.png" alt=""></a>
+                            </div>
+                            <div class="col-md-3" style="margin-bottom: 40px;">
+                                <div class="headline"><h2>Useful Links</h2></div>
+                                <ul class="list-unstyled link-list">
+                                    <li><a href="about.html">About us</a><i class="fa fa-angle-right"></i></li>
+                                    <li><a href="login.html">Login</a><i class="fa fa-angle-right"></i></li>
+                                    <li><a href="register.html">Register</a><i class="fa fa-angle-right"></i></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 map-img" style="margin-bottom: 40px;">
+                                    <div class="headline"><h2>Contact Us</h2></div>
+                                    <address class="md-margin-bottom-40">
+                                            100 akarigbo road <br/>
+                                            Sagamu, Ogun state<br/>
+                                            
+                                    </address>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>
+                                    2024 &copy; CIN TECH SOLUTIONS.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    
+</body>
+</html>
